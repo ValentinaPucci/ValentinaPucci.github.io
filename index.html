@@ -1,21 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Name</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentina Pucci</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Hello, I'm Your Name</h1>
-  <p>Master student in Neuroengineering @ EPFL</p>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Project 1 – short description</li>
-    <li>Project 2 – short description</li>
-  </ul>
+  <!-- HEADER -->
+  <header class="header-container">
+    <div class="header-text">
+    <h1>Valentina Pucci</h1>
+    <p>Master’s Student in Neuro-X @ EPFL</p>
+    <p>
+      <a href="mailto:valentinapucci2002@gmail.com">Email</a> · 
+      <a href="https://github.com/ValentinaPucci" target="_blank">GitHub</a> · 
+      <a href="https://www.linkedin.com/in/valentina-pucci-840250265" target="_blank">LinkedIn</a> · 
+      <a href="CV.pdf" target="_blank">CV (PDF)</a>
+    </p>
+  </div>
 
-  <h2>Contact</h2>
-  <p>Email: you@email.com</p>
+    <div class="header-photo">
+      <img src="photo_cv.png" alt="Valentina Pucci">
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About</h2>
+    <p>
+      I am a Master’s student in Neuro-X at EPFL, specializing in neuroengineering and computational methods. 
+      I have a strong foundation in engineering, data analysis, and biomedical systems, and I enjoy working on complex problems at the intersection of hardware, software, and medical technology.
+      Through my academic and project experience, I have worked on complex problems at the intersection of hardware, software, and medical 
+      technology. 
+      I am particularly interested in the development of medical devices and technologies that can improve patient care. 
+      Having played volleyball for most of my life, I have developed a strong appreciation for teamwork, discipline, and collaboration, 
+      which I bring into my work and into projects that combine engineering and neuroscience to advance human health.
+    </p>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project-card" onclick="openModal('p1')">
+      <img src="img/TNE.png" class="card-img">
+      <h3>Spinal Cord Stimulation Modeling</h3>
+      <p class="meta">COMSOL · Python · NEURON</p>
+      <p>Hybrid computational model to study neural recruitment under different stimulation strategies.</p>
+    </div>
+
+    <div class="project-card" onclick="openModal('p5')">
+      <img src="img/ada.png" class="card-img">
+      <h3>MERLOT: Online Content & Network Analysis</h3>
+      <p class="meta">Data Science · Network Analysis · NLP</p>
+      <p>Large-scale analysis of online content and relationships using real-world datasets.</p>
+    </div>
+
+    <div class="project-card" onclick="openModal('p3')">
+      <img src="img/lsbi.png" class="card-img">
+      <h3>Soft Implantable Electrodes</h3>
+      <p class="meta">Bioelectronics · Electrochemistry</p>
+      <p>Characterization of kirigami-based electrodes for long-term neural interfaces.</p>
+    </div>
+
+    <div class="project-card" onclick="openModal('p2')">
+      <img src="img/ML.png" class="card-img">
+      <h3>fMRI Task Prediction</h3>
+      <p class="meta">Deep Learning · RNN · Neuroimaging</p>
+      <p>Predicting task timecourses from brain activity using recurrent neural networks.</p>
+    </div>
+
+    <div class="project-card" onclick="openModal('p4')">
+      <img src="img/chd.jpg" class="card-img">
+      <h3>CHD Risk Prediction</h3>
+      <p class="meta">Machine Learning · Healthcare</p>
+      <p>Logistic regression model for early prediction of coronary heart disease risk.</p>
+    </div>
+
+  </section>
+  
+  
+  <!-- MODALS -->
+  
+  <div id="p1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p1')">&times;</span>
+  
+      <h2>Hybrid Computational Models of Spinal Cord Stimulation</h2>
+  
+      <p><strong>Technologies:</strong> MATLAB, Python, COMSOL Multiphysics, NEURON</p>
+  
+      <p>
+        Developed a hybrid computational model of the thoracic spinal cord to study
+        neural recruitment under transcutaneous and epidural stimulation.
+      </p>
+  
+      <p>
+        The model integrates finite element simulations (COMSOL) with neural dynamics
+        (NEURON) to analyze how different stimulation patterns affect selectivity
+        and activation of spinal circuits.
+      </p>
+  
+      <ul>
+        <li>Built a multi-scale simulation pipeline combining physics and neural modeling</li>
+        <li>Analyzed recruitment and selectivity across stimulation configurations</li>
+        <li>Collaborated with clinicians to ensure translational relevance</li>
+      </ul>
+  
+      <p>
+        <a href="#">Code</a> · <a href="#">Report</a>
+      </p>
+    </div>
+  </div>
+  
+  <div id="p2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p2')">&times;</span>
+  
+      <h2>Task Prediction Using fMRI Data</h2>
+  
+      <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
+  
+      <p>
+        Developed deep learning models to predict task timecourses directly from
+        fMRI brain activity using data from the Human Connectome Project.
+      </p>
+  
+      <ul>
+        <li>Framed the problem as a blind deconvolution task</li>
+        <li>Implemented recurrent neural networks to capture temporal dynamics</li>
+        <li>Evaluated model performance on real neuroimaging datasets</li>
+      </ul>
+  
+      <p>
+        <a href="#">Code</a> · <a href="#">Report</a>
+      </p>
+    </div>
+  </div>
+  
+  <div id="p3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p3')">&times;</span>
+  
+      <h2>Kirigami-Based Soft Implantable Electrodes</h2>
+  
+      <p><strong>Technologies:</strong> Electrochemistry, Material Testing</p>
+  
+      <p>
+        Investigated the long-term stability of kirigami-inspired soft electrodes
+        designed for chronic neural interfacing.
+      </p>
+  
+      <ul>
+        <li>Conducted ageing studies to evaluate impedance evolution</li>
+        <li>Analyzed material degradation mechanisms over time</li>
+        <li>Assessed suitability for long-term implantation</li>
+      </ul>
+  
+      <p>
+        <a href="#">Details</a>
+      </p>
+    </div>
+  </div>
+  
+  <div id="p4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p4')">&times;</span>
+  
+      <h2>Coronary Heart Disease Risk Prediction</h2>
+  
+      <p><strong>Technologies:</strong> Python, Scikit-learn</p>
+  
+      <p>
+        Built and optimized a logistic regression model to predict coronary heart
+        disease risk using population health data.
+      </p>
+  
+      <ul>
+        <li>Performed feature engineering and data preprocessing</li>
+        <li>Applied class balancing and regularization techniques</li>
+        <li>Optimized decision thresholds for improved prediction performance</li>
+      </ul>
+  
+      <p>
+        <a href="#">Code</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="p5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p5')">&times;</span>
+  
+      <h2>MERLOT — Data Story on Online Content & Network Structure</h2>
+  
+      <p><strong>Technologies:</strong> Python, Network Analysis, NLP, Data Visualization</p>
+  
+      <p>
+        This project explores a large-scale dataset of online content and interactions,
+        focusing on how information spreads and how relationships form in digital ecosystems.
+      </p>
+  
+      <p>
+        The goal was to extract meaningful structure from complex, noisy data and turn it
+        into an interpretable data story.
+      </p>
+  
+      <ul>
+        <li>Built and analyzed large-scale interaction networks</li>
+        <li>Applied text processing and feature extraction techniques</li>
+        <li>Studied community structure and connectivity patterns</li>
+        <li>Designed visualizations to communicate insights clearly</li>
+      </ul>
+  
+      <p>
+        The project emphasizes the link between **structure (networks)** and
+        **content (textual signals)** in real-world datasets.
+      </p>
+  
+      <p>
+        <a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a>
+      </p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Valentina Pucci</p>
+  </footer>
+
 </body>
 </html>
