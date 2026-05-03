@@ -23,7 +23,7 @@
   </div>
 
     <div class="header-photo">
-      <img src="photo_cv.png" alt="Valentina Pucci">
+      <img src="img/photo_cv.png" alt="Valentina Pucci">
     </div>
   </header>
 
@@ -55,15 +55,15 @@
 
     <div class="project-card" onclick="openModal('p5')">
       <img src="img/ada.png" class="card-img">
-      <h3>MERLOT: Online Content & Network Analysis</h3>
-      <p class="meta">Data Science · Network Analysis · NLP</p>
-      <p>Large-scale analysis of online content and relationships using real-world datasets.</p>
+      <h3>Mapping the Collective Reddit Brain - Data Story about the Reddit Network dataset</h3>
+      <p class="meta">Data Science · Network Analysis · Data Analysis</p>
+      <p>Treating Reddit as a nervous system to uncover brain-like structure in millions of online interactions.</p>
     </div>
 
     <div class="project-card" onclick="openModal('p3')">
-      <img src="img/lsbi.png" class="card-img">
+      <img src="img/lsbi2.png" class="card-img">
       <h3>Soft Implantable Electrodes</h3>
-      <p class="meta">Bioelectronics · Electrochemistry</p>
+      <p class="meta">Bioelectronics · Electrochemistry · Data Analysis</p>
       <p>Characterization of kirigami-based electrodes for long-term neural interfaces.</p>
     </div>
 
@@ -72,13 +72,6 @@
       <h3>fMRI Task Prediction</h3>
       <p class="meta">Deep Learning · RNN · Neuroimaging</p>
       <p>Predicting task timecourses from brain activity using recurrent neural networks.</p>
-    </div>
-
-    <div class="project-card" onclick="openModal('p4')">
-      <img src="img/chd.jpg" class="card-img">
-      <h3>CHD Risk Prediction</h3>
-      <p class="meta">Machine Learning · Healthcare</p>
-      <p>Logistic regression model for early prediction of coronary heart disease risk.</p>
     </div>
 
   </section>
@@ -91,6 +84,8 @@
       <span class="close" onclick="closeModal('p1')">&times;</span>
   
       <h2>Hybrid Computational Models of Spinal Cord Stimulation</h2>
+
+      <img src="img/TNE.png" class="modal-img">
   
       <p><strong>Technologies:</strong> MATLAB, Python, COMSOL Multiphysics, NEURON</p>
   
@@ -112,7 +107,7 @@
       </ul>
   
       <p>
-        <a href="#">Code</a> · <a href="#">Report</a>
+        Code (Confidential) · <a href="docs/report_TNE.pdf" target="_blank">Report</a>
       </p>
     </div>
   </div>
@@ -122,6 +117,8 @@
       <span class="close" onclick="closeModal('p2')">&times;</span>
   
       <h2>Task Prediction Using fMRI Data</h2>
+
+      <img src="img/ML.png" class="modal-img">
   
       <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
   
@@ -137,7 +134,7 @@
       </ul>
   
       <p>
-        <a href="#">Code</a> · <a href="#">Report</a>
+        <a href="https://github.com/fedemengo/CS-433-ML4S" target="_blank">Code</a> · <a href="docs/ML2_report.pdf" target="_blank">Report</a>
       </p>
     </div>
   </div>
@@ -147,8 +144,10 @@
       <span class="close" onclick="closeModal('p3')">&times;</span>
   
       <h2>Kirigami-Based Soft Implantable Electrodes</h2>
+
+      <img src="img/lsbi.png" class="modal-img">
   
-      <p><strong>Technologies:</strong> Electrochemistry, Material Testing</p>
+      <p><strong>Technologies:</strong> Electrochemistry, Material Testing, Data Analysis</p>
   
       <p>
         Investigated the long-term stability of kirigami-inspired soft electrodes
@@ -162,7 +161,7 @@
       </ul>
   
       <p>
-        <a href="#">Details</a>
+        Report & Code (confidential)
       </p>
     </div>
   </div>
@@ -171,9 +170,9 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('p4')">&times;</span>
   
-      <h2>Coronary Heart Disease Risk Prediction</h2>
+      <h2>Machine Learning for Early Detection of Coronary Heart Disease Risk</h2>
   
-      <p><strong>Technologies:</strong> Python, Scikit-learn</p>
+      <p><strong>Technologies:</strong> Python </p>
   
       <p>
         Built and optimized a logistic regression model to predict coronary heart
@@ -187,7 +186,7 @@
       </ul>
   
       <p>
-        <a href="#">Code</a>
+        Code (confidential)
       </p>
     </div>
   </div>
@@ -195,32 +194,23 @@
   <div id="p5" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p5')">&times;</span>
+      <h2>Mapping the Collective Reddit Brain</h2>
+      <img src="img/ada_exp.png" class="modal-img">
   
-      <h2>MERLOT — Data Story on Online Content & Network Structure</h2>
-  
-      <p><strong>Technologies:</strong> Python, Network Analysis, NLP, Data Visualization</p>
-  
-      <p>
-        This project explores a large-scale dataset of online content and interactions,
-        focusing on how information spreads and how relationships form in digital ecosystems.
-      </p>
+      <p><strong>Technologies:</strong> Python, Network Analysis, Data Visualization</p>
   
       <p>
-        The goal was to extract meaningful structure from complex, noisy data and turn it
-        into an interpretable data story.
+        We treated Reddit as a nervous system — subreddits as neurons, hyperlinks as action potentials,
+        and linguistic co-activation as functional connectivity — asking whether a platform of millions
+        behaves like a brain.
       </p>
   
       <ul>
-        <li>Built and analyzed large-scale interaction networks</li>
-        <li>Applied text processing and feature extraction techniques</li>
-        <li>Studied community structure and connectivity patterns</li>
-        <li>Designed visualizations to communicate insights clearly</li>
+        <li><strong>Interaction networks</strong> — Built a structural connectome from hundreds of thousands of hyperlinks, classifying communities into sensory, interneuron, and motor archetypes by in/out-degree, with 300-dimensional embeddings as "axon length" proxies.</li>
+        <li><strong>NLP & feature extraction</strong> — Compressed LIWC psychological signals into six coherent neural signals per subreddit (affect, cognition, social orientation, etc.) to capture meaningful dynamics across time.</li>
+        <li><strong>Functional vs. structural connectivity</strong> — Isolated subreddits that co-evolve without ever directly linking, analogous to fMRI connectivity beyond anatomical wiring.</li>
+        <li><strong>Visualizations</strong> — Interactive dashboards for sentiment flow, hub resilience, and a 3D brain projection mapping subreddit categories onto MNI brain regions.</li>
       </ul>
-  
-      <p>
-        The project emphasizes the link between **structure (networks)** and
-        **content (textual signals)** in real-world datasets.
-      </p>
   
       <p>
         <a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a>
@@ -228,7 +218,7 @@
     </div>
   </div>
   
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 
   <!-- FOOTER -->
   <footer>
