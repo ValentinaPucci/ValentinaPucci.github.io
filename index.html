@@ -10,96 +10,120 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header-container">
-    <div class="header-text">
-    <h1>Valentina Pucci</h1>
-    <p>Master’s Student in Neuro-X @ EPFL</p>
-    <p>Intern at <a href="https://www.mynerva.com" target="_blank">Mynerva Medical</a></p>
-    <p>
-      <a href="mailto:valentinapucci2002@gmail.com">Email</a> · 
-      <a href="https://github.com/ValentinaPucci" target="_blank">GitHub</a> · 
-      <a href="https://www.linkedin.com/in/valentina-pucci-840250265" target="_blank">LinkedIn</a> · 
-      <a href="docs/CV.pdf" target="_blank">CV (PDF)</a>
-    </p>
-  </div>
-
-    <div class="header-photo">
-      <img src="img/photo_cv.png" alt="Valentina Pucci">
+  <header>
+    <div class="header-container">
+      <div class="header-text">
+        <p class="header-eyebrow">Neuro-X · EPFL · 2026</p>
+        <h1>Valentina Pucci</h1>
+        <p class="header-tagline">I'm interested in technology that ends up in hospitals, clinics, and homes — the kind that quietly makes someone's life better.
+          <div class="header-links">
+          <a href="mailto:valentinapucci2002@gmail.com">Email</a>
+          <a href="https://github.com/ValentinaPucci" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/valentina-pucci-840250265" target="_blank">LinkedIn</a>
+          <a href="docs/CV.pdf" target="_blank">CV (PDF)</a>
+        </div>
+      </div>
+      <div class="header-photo">
+        <img src="img/photo_cv.png" alt="Valentina Pucci">
+      </div>
     </div>
   </header>
 
   <!-- ABOUT -->
   <section>
-    <h2>About</h2>
-    <p>
-      I am a Master’s student in Neuro-X at EPFL, specializing in neuroengineering and computational methods. 
-      I have a strong foundation in engineering, data analysis, and biomedical systems, and I enjoy working on complex problems at the intersection of hardware, software, and medical technology.
-      I am particularly interested in the development of medical devices and technologies that can improve patient care. 
-      I bring the same discipline and teamwork from competitive volleyball into collaborative engineering projects.
+    <div class="section-accent"></div>
+    <p class="section-label">About</p>
+    <p class="about-text">
+      I'm a Master's student in Neuro-X at EPFL, working at the intersection of biomedical engineering, computational modeling, and data science. Currently interning at <a href="https://www.mynerva.com" target="_blank">Mynerva Medical</a>. I'm drawn to problems that require building something new to even ask the right question — a simulation before a measurement, a model before a hypothesis.
     </p>
-
-    <p class="skills">Python · MATLAB · C · Java · COMSOL · HTML · JavaScript · VHDL</p>
-
+    <p class="about-text">
+      Outside of that, I play competitive volleyball — it's shaped me in ways that go beyond the sport: I'm a better teammate, communicator, and problem-solver, and it's instilled in me the kind of consistency, adaptability, and focus that I bring into everything I do.
+    </p>
+    <div class="skills">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">MATLAB</span>
+      <span class="skill-tag">C</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">COMSOL</span>
+      <span class="skill-tag">NEURON</span>
+      <span class="skill-tag">PyTorch</span>
+      <span class="skill-tag">HTML</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">VHDL</span>
+    </div>
   </section>
-
 
   <!-- PROJECTS -->
   <section>
-    <h2>Projects</h2>
+    <div class="section-accent"></div>
+    <p class="section-label">Projects</p>
+    <div class="projects-grid">
 
-    <div class="project-card" onclick="openModal('p1')">
-      <img src="img/TNE.png" class="card-img">
-      <h3>Spinal Cord Stimulation Modeling</h3>
-      <p class="meta">COMSOL · Python · NEURON</p>
-      <p>Hybrid computational model combining FEM and neural dynamics to study spinal cord stimulation strategies.</p>
+      <div class="project-card" onclick="openModal('p1')">
+        <img src="img/TNE.png" class="card-img" alt="Spinal Cord Stimulation">
+        <div class="card-body">
+          <h3>Spinal Cord Stimulation Modeling</h3>
+          <p class="meta">COMSOL · Python · NEURON</p>
+          <p class="card-hook">What does it take to selectively recruit a single fiber type deep in the spinal cord?</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('p3')">
+        <img src="img/lsbi2.png" class="card-img" alt="Soft Implantable Electrodes">
+        <div class="card-body">
+          <h3>Soft Implantable Electrodes</h3>
+          <p class="meta">Bioelectronics · Electrochemistry · Data Analysis</p>
+          <p class="card-hook">How long before a kirigami electrode starts to forget it was designed to last?</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('p5')">
+        <img src="img/ada.png" class="card-img" alt="Reddit Brain">
+        <div class="card-body">
+          <h3>Mapping the Collective Reddit Brain</h3>
+          <p class="meta">Data Science · Network Analysis · NLP</p>
+          <p class="card-hook">We treated Reddit as a nervous system. It behaved like one.</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('p2')">
+        <img src="img/ML.png" class="card-img" alt="fMRI Task Prediction">
+        <div class="card-body">
+          <h3>fMRI Task Prediction</h3>
+          <p class="meta">Deep Learning · RNN · Neuroimaging</p>
+          <p class="card-hook">Can a recurrent network recover what a brain was doing from BOLD signal alone?</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('p4')">
+        <img src="img/chd2.png" class="card-img" alt="CHD Risk Prediction">
+        <div class="card-body">
+          <h3>Coronary Heart Disease Risk Prediction</h3>
+          <p class="meta">Machine Learning</p>
+          <p class="card-hook">Early warning signals from population health data, before symptoms appear.</p>
+        </div>
+      </div>
+
+      <div class="project-card" onclick="openModal('p6')">
+        <img src="img/graphene_bubble.png" class="card-img" alt="Graphene Bubble Lens">
+        <div class="card-body">
+          <h3>Graphene Bubble Lens Simulation</h3>
+          <p class="meta">COMSOL · Nanosystems · FEM</p>
+          <p class="card-hook">A lens you tune with voltage, modeled layer by atom-thin layer.</p>
+        </div>
+      </div>
+
     </div>
-
-    <div class="project-card" onclick="openModal('p3')">
-      <img src="img/lsbi2.png" class="card-img">
-      <h3>Soft Implantable Electrodes</h3>
-      <p class="meta">Bioelectronics · Electrochemistry · Data Analysis</p>
-      <p>Characterized kirigami-based soft electrodes through ageing studies to assess long-term neural implant stability.</p>
-    </div>
-
-    <div class="project-card" onclick="openModal('p5')">
-      <img src="img/ada.png" class="card-img">
-      <h3>Mapping the Collective Reddit Brain - Data Story about the Reddit Network dataset</h3>
-      <p class="meta">Data Science · Network Analysis · Data Analysis</p>
-      <p>Analyzed hundreds of thousands of subreddit hyperlinks to uncover community structure and functional connectivity.</p>
-    </div>
-
-    <div class="project-card" onclick="openModal('p2')">
-      <img src="img/ML.png" class="card-img">
-      <h3>fMRI Task Prediction</h3>
-      <p class="meta">Deep Learning · RNN · Neuroimaging</p>
-      <p>Trained RNNs on Human Connectome Project fMRI data to predict task timecourses via blind deconvolution.</p>
-    </div>
-
-    <div class="project-card" onclick="openModal('p4')">
-      <img src="img/chd2.png" class="card-img">
-      <h3>Coronary Heart Disease (CHD) Risk Prediction</h3>
-      <p class="meta">Machine Learning</p>
-      <p>Created a logistic regression model for coronary heart disease risk prediction.</p>
-    
-    </div>
-
-    <div class="project-card" onclick="openModal('p6')">
-      <img src="img/graphene_bubble.png" class="card-img">
-      <h3>Graphene Bubble Lens Simulation</h3>
-      <p class="meta">COMSOL · Nanosystems</p>
-      <p>Modelled electromechanical deformation of graphene bubble lenses using multiphysics FEM simulation.</p>
-    </div>
-
   </section>
-  
-  
+
+
   <!-- MODALS -->
-  
+
   <div id="p1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p1')">&times;</span>
       <h2>Hybrid Computational Models of Spinal Cord Stimulation</h2>
-      <img src="img/TNE.png" class="modal-img">
+      <img src="img/TNE.png" class="modal-img" alt="Spinal Cord Stimulation">
       <p><strong>Technologies:</strong> MATLAB, Python, COMSOL Multiphysics, NEURON</p>
       <p>
         Built from scratch a hybrid multi-scale computational model of the thoracic spinal cord
@@ -113,44 +137,40 @@
         <li><strong>Recruitment & selectivity analysis</strong> — Quantified fiber-type selectivity and recruitment curves across stimulation configurations, identifying conditions that maximize dorsal column activation while minimizing off-target recruitment.</li>
         <li><strong>Translational framing</strong> — Engaged with clinicians to ground model parameters in realistic therapeutic scenarios and ensure findings were interpretable in a clinical context.</li>
       </ul>
-      <p>
-        Code (confidential) · <a href="docs/report_TNE.pdf" target="_blank">Report</a>
-      </p>
+      <p>Code (confidential) · <a href="docs/report_TNE.pdf" target="_blank">Report</a></p>
     </div>
   </div>
-  
+
   <div id="p2" class="modal">
     <div class="modal-content">
-    <span class="close" onclick="closeModal('p2')">&times;</span>
-    <h2>Task Prediction Using fMRI Data</h2>
-    <img src="img/ML.png" class="modal-img">
-    <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
-    <p>
-            Developed deep learning models to predict task timecourses directly from
-            fMRI brain activity using data from the Human Connectome Project.
-    </p>
-    <ul>
-    <li>Framed the problem as a blind deconvolution task</li>
-    <li>Implemented recurrent neural networks to capture temporal dynamics</li>
-    <li>Evaluated model performance on real neuroimaging datasets</li>
-    </ul>
-    <p><strong>My Contributions:</strong></p>
-    <ul>
-    <li>Designed the preprocessing pipeline: grey matter masking, Gaussian spatial smoothing, and voxel selection via F-statistic thresholding and cluster filtering</li>
-    <li>Developed the dataset augmentation strategy: temporal circular shifts, amplitude scaling, Gaussian noise injection, and temporal stretching to reduce inter-voxel correlation and improve generalization</li>
-    <li>Led model selection: benchmarked 10+ architectures (LSTM, BiLSTM, ConvLSTM, attention variants) and identified the LSTMConvLSTM with custom loss as the best-performing model</li>
-    </ul>
-    <p>
-    <a href="https://github.com/fedemengo/CS-433-ML4S" target="_blank">Code</a> · <a href="docs/ML2_report.pdf" target="_blank">Report</a>
-    </p>
+      <span class="close" onclick="closeModal('p2')">&times;</span>
+      <h2>Task Prediction Using fMRI Data</h2>
+      <img src="img/ML.png" class="modal-img" alt="fMRI Task Prediction">
+      <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
+      <p>
+        Developed deep learning models to predict task timecourses directly from
+        fMRI brain activity using data from the Human Connectome Project.
+      </p>
+      <ul>
+        <li>Framed the problem as a blind deconvolution task</li>
+        <li>Implemented recurrent neural networks to capture temporal dynamics</li>
+        <li>Evaluated model performance on real neuroimaging datasets</li>
+      </ul>
+      <p><strong>My Contributions:</strong></p>
+      <ul>
+        <li>Designed the preprocessing pipeline: grey matter masking, Gaussian spatial smoothing, and voxel selection via F-statistic thresholding and cluster filtering</li>
+        <li>Developed the dataset augmentation strategy: temporal circular shifts, amplitude scaling, Gaussian noise injection, and temporal stretching to reduce inter-voxel correlation and improve generalization</li>
+        <li>Led model selection: benchmarked 10+ architectures (LSTM, BiLSTM, ConvLSTM, attention variants) and identified the LSTMConvLSTM with custom loss as the best-performing model</li>
+      </ul>
+      <p><a href="https://github.com/fedemengo/CS-433-ML4S" target="_blank">Code</a> · <a href="docs/ML2_report.pdf" target="_blank">Report</a></p>
     </div>
   </div>
-  
+
   <div id="p3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p3')">&times;</span>
       <h2>Kirigami-Based Soft Implantable Electrodes</h2>
-      <img src="img/lsbi.png" class="modal-img">
+      <img src="img/lsbi.png" class="modal-img" alt="Soft Implantable Electrodes">
       <p><strong>Technologies:</strong> Electrochemistry, Impedance Spectroscopy, Material Testing, Data Analysis</p>
       <p>
         Independently investigated the long-term electrochemical and mechanical stability of
@@ -163,33 +183,25 @@
         <li><strong>Degradation analysis</strong> — Characterized material failure mechanisms — including delamination, coating breakdown, and geometric deformation of the kirigami cuts — and linked them to measurable changes in the electrochemical response.</li>
         <li><strong>Suitability assessment</strong> — Synthesized experimental findings into a quantitative assessment of electrode longevity and reliability, evaluating readiness for chronic in vivo deployment.</li>
       </ul>
-      <p>
-        Report & Code (confidential)
-      </p>
+      <p>Report & Code (confidential)</p>
     </div>
   </div>
-  
+
   <div id="p4" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p4')">&times;</span>
-  
       <h2>Machine Learning for Early Detection of Coronary Heart Disease Risk</h2>
-  
-      <img src="img/chd1.png" class="modal-img">
-
+      <img src="img/chd1.png" class="modal-img" alt="CHD Risk Prediction">
       <p><strong>Technologies:</strong> Python, Machine Learning</p>
-  
       <p>
         Built and optimized a logistic regression model to predict coronary heart
         disease risk using population health data.
       </p>
-  
       <ul>
         <li>Performed feature engineering and data preprocessing</li>
         <li>Applied class balancing and regularization techniques</li>
         <li>Optimized decision thresholds for improved prediction performance</li>
       </ul>
-
       <p><strong>My Contributions:</strong></p>
       <ul>
         <li>Designed and executed the missing data imputation strategy</li>
@@ -197,10 +209,7 @@
         <li>Developed the feature expansion method to improve model expressiveness</li>
         <li>Tuned the decision threshold to optimize precision/recall trade-off</li>
       </ul>
-  
-      <p>
-        Code (confidential) · <a href="docs/ML1_report.pdf" target="_blank">Report</a>
-      </p>
+      <p>Code (confidential) · <a href="docs/ML1_report.pdf" target="_blank">Report</a></p>
     </div>
   </div>
 
@@ -208,66 +217,60 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('p5')">&times;</span>
       <h2>Mapping the Collective Reddit Brain</h2>
-      <img src="img/ada_exp.png" class="modal-img">
+      <img src="img/ada_exp.png" class="modal-img" alt="Reddit Brain">
       <p><strong>Technologies:</strong> Python, Network Analysis, Data Visualization</p>
       <p>
-              We treated Reddit as a nervous system — subreddits as neurons, hyperlinks as action potentials,
-              and linguistic co-activation as functional connectivity — asking whether a platform of millions
-              behaves like a brain.
+        We treated Reddit as a nervous system — subreddits as neurons, hyperlinks as action potentials,
+        and linguistic co-activation as functional connectivity — asking whether a platform of millions
+        behaves like a brain.
       </p>
       <ul>
-      <li><strong>Interaction networks</strong> — Built a structural connectome from hundreds of thousands of hyperlinks, classifying communities into sensory, interneuron, and motor archetypes by in/out-degree, with 300-dimensional embeddings as "axon length" proxies.</li>
-      <li><strong>NLP & feature extraction</strong> — Compressed LIWC psychological signals into six coherent neural signals per subreddit (affect, cognition, social orientation, etc.) to capture meaningful dynamics across time.</li>
-      <li><strong>Functional vs. structural connectivity</strong> — Isolated subreddits that co-evolve without ever directly linking, analogous to fMRI connectivity beyond anatomical wiring.</li>
-      <li><strong>Visualizations</strong> — Interactive dashboards for sentiment flow, hub resilience, and a 3D brain projection mapping subreddit categories onto MNI brain regions.</li>
+        <li><strong>Interaction networks</strong> — Built a structural connectome from hundreds of thousands of hyperlinks, classifying communities into sensory, interneuron, and motor archetypes by in/out-degree, with 300-dimensional embeddings as "axon length" proxies.</li>
+        <li><strong>NLP & feature extraction</strong> — Compressed LIWC psychological signals into six coherent neural signals per subreddit (affect, cognition, social orientation, etc.) to capture meaningful dynamics across time.</li>
+        <li><strong>Functional vs. structural connectivity</strong> — Isolated subreddits that co-evolve without ever directly linking, analogous to fMRI connectivity beyond anatomical wiring.</li>
+        <li><strong>Visualizations</strong> — Interactive dashboards for sentiment flow, hub resilience, and a 3D brain projection mapping subreddit categories onto MNI brain regions.</li>
       </ul>
       <p><strong>My Contributions:</strong></p>
       <ul>
-      <li>Led the project and coordinated the team across all research directions</li>
-      <li>Originated the core concept: representing Reddit's structure as a brain and mapping it onto a neurological atlas</li>
-      <li>Drove the integration of external datasets to enrich the network with real-world context</li>
-      <li>Designed the neuron archetype analysis: asking whether subreddit categories behave like sensory, interneuron, and motor regions based on their linking patterns</li>
-      <li>Conceptualized the Positive & Negative Circuits framework to identify amplifying and dampening dynamics in the network</li>
-      <li>NLP & feature extraction to create the clustering in categories</li>
+        <li>Led the project and coordinated the team across all research directions</li>
+        <li>Originated the core concept: representing Reddit's structure as a brain and mapping it onto a neurological atlas</li>
+        <li>Drove the integration of external datasets to enrich the network with real-world context</li>
+        <li>Designed the neuron archetype analysis: asking whether subreddit categories behave like sensory, interneuron, and motor regions based on their linking patterns</li>
+        <li>Conceptualized the Positive & Negative Circuits framework to identify amplifying and dampening dynamics in the network</li>
+        <li>NLP & feature extraction to create the clustering in categories</li>
       </ul>
+      <p><a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a></p>
+    </div>
+  </div>
+
+  <div id="p6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('p6')">&times;</span>
+      <h2>Graphene Bubble Lens — Electromechanical Simulation</h2>
+      <img src="img/graphene_bubble.png" class="modal-img" alt="Graphene Bubble Lens">
+      <p><strong>Technologies:</strong> COMSOL Multiphysics, Electrostatics, Solid Mechanics, FEM</p>
       <p>
-      <a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a>
+        Modelled the voltage-induced deformation of graphene bubble lenses using
+        multiphysics finite-element simulation, treating the bubble as a tunable
+        nano-optical element whose geometry is controlled by an applied gate voltage.
       </p>
-      </div>
-      </div>
+      <ul>
+        <li><strong>Geometry & physics setup</strong> — Built circular (2D axisymmetric + 3D) and triangular (pyramidal 3D) lens geometries in COMSOL, coupling Electrostatics and Solid Mechanics interfaces with parametric voltage sweeps from 0 to 400 V.</li>
+        <li><strong>Voltage vs. deflection</strong> — Simulated central deflection as a function of gate voltage, bubble diameter, and SiO₂ thickness; thinner dielectric layers produced up to 300 nm deflection vs. ~20 nm for thick ones, consistent with the capacitor-force model.</li>
+        <li><strong>Stress distribution</strong> — Analysed von Mises stress maps showing maximum stress concentration at clamped edges, with symmetric patterns for circular and corner-localized peaks for triangular geometries.</li>
+        <li><strong>Modal / eigenfrequency analysis</strong> — Extracted resonant modes for both lens shapes; results confirm out-of-plane fundamental modes with higher-order nodal patterns at increased frequencies.</li>
+      </ul>
+      <p><strong>My Contributions:</strong></p>
+      <ul>
+        <li>Led the project and coordinated the team across all research directions</li>
+        <li>Built and debugged the full 2D-axisymmetric and 3D COMSOL geometry for the circular and triangular lens, resolving memory assembly issues by finding the minimum viable graphene thickness (6 nm)</li>
+        <li>Ran parametric sweeps across voltage, bubble diameter, and SiO₂ thickness and interpreted the dielectric-spacing effect on electrostatic force</li>
+      </ul>
+      <p><a href="docs/EE536_report.pdf" target="_blank">Report</a></p>
+    </div>
+  </div>
 
-
-      <div id="p6" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('p6')">&times;</span>
-          <h2>Graphene Bubble Lens — Electromechanical Simulation</h2>
-          <img src="img/graphene_bubble.png" class="modal-img">
-          <p><strong>Technologies:</strong> COMSOL Multiphysics, Electrostatics, Solid Mechanics, FEM</p>
-          <p>
-            Modelled the voltage-induced deformation of graphene bubble lenses using
-            multiphysics finite-element simulation, treating the bubble as a tunable
-            nano-optical element whose geometry is controlled by an applied gate voltage.
-          </p>
-          <ul>
-            <li><strong>Geometry & physics setup</strong> — Built circular (2D axisymmetric + 3D) and triangular (pyramidal 3D) lens geometries in COMSOL, coupling Electrostatics and Solid Mechanics interfaces with parametric voltage sweeps from 0 to 400 V.</li>
-            <li><strong>Voltage vs. deflection</strong> — Simulated central deflection as a function of gate voltage, bubble diameter, and SiO₂ thickness; thinner dielectric layers produced up to 300 nm deflection vs. ~20 nm for thick ones, consistent with the capacitor-force model.</li>
-            <li><strong>Stress distribution</strong> — Analysed von Mises stress maps showing maximum stress concentration at clamped edges, with symmetric patterns for circular and corner-localized peaks for triangular geometries.</li>
-            <li><strong>Modal / eigenfrequency analysis</strong> — Extracted resonant modes for both lens shapes; results confirm out-of-plane fundamental modes with higher-order nodal patterns at increased frequencies.</li>
-          </ul>
-          <p><strong>My Contributions:</strong></p>
-          <ul>
-            <li>Led the project and coordinated the team across all research directions</li>
-            <li>Built and debugged the full 2d-axisymmetric and 3D COMSOL geometry for the circular and triangular lens, resolving memory assembly issues by finding the minimum viable graphene thickness (6 nm)</li>
-            <li>Ran parametric sweeps across voltage, bubble diameter, and SiO₂ thickness and interpreted the dielectric-spacing effect on electrostatic force</li>
-          </ul>
-          <p>
-            <a href="docs/EE536_report.pdf" target="_blank">Report</a>
-          </p>
-        </div>
-      </div>
-  
   <script src="scripts.js"></script>
-
 
   <!-- FOOTER -->
   <footer>
