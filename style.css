@@ -82,8 +82,8 @@ h1 {
 }
 
 .header-photo img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
@@ -374,4 +374,13 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── COURSES ── */
+ 
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
 }
