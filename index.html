@@ -75,6 +75,21 @@
       <p>Trained RNNs on Human Connectome Project fMRI data to predict task timecourses via blind deconvolution.</p>
     </div>
 
+    <div class="project-card" onclick="openModal('p4')">
+      <img src="img/chd2.png" class="card-img">
+      <h3>Coronary Heart Disease (CHD) Risk Prediction</h3>
+      <p class="meta">Machine Learning</p>
+      <p>Created a logistic regression model for coronary heart disease risk prediction.</p>
+    
+    </div>
+
+    <div class="project-card" onclick="openModal('p6')">
+      <img src="img/graphene_bubble.png" class="card-img">
+      <h3>Graphene Bubble Lens Simulation</h3>
+      <p class="meta">COMSOL · Nanosystems</p>
+      <p>Modelled electromechanical deformation of graphene bubble lenses using multiphysics FEM simulation.</p>
+    </div>
+
   </section>
   
   
@@ -83,84 +98,71 @@
   <div id="p1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p1')">&times;</span>
-  
       <h2>Hybrid Computational Models of Spinal Cord Stimulation</h2>
-
       <img src="img/TNE.png" class="modal-img">
-  
       <p><strong>Technologies:</strong> MATLAB, Python, COMSOL Multiphysics, NEURON</p>
-  
       <p>
-        Developed a hybrid computational model of the thoracic spinal cord to study
-        neural recruitment under transcutaneous and epidural stimulation.
+        Built from scratch a hybrid multi-scale computational model of the thoracic spinal cord
+        to study neural recruitment under transcutaneous and epidural electrical stimulation,
+        bridging finite element physics with biophysical neural dynamics.
       </p>
-  
-      <p>
-        The model integrates finite element simulations (COMSOL) with neural dynamics
-        (NEURON) to analyze how different stimulation patterns affect selectivity
-        and activation of spinal circuits.
-      </p>
-  
       <ul>
-        <li>Built a multi-scale simulation pipeline combining physics and neural modeling</li>
-        <li>Analyzed recruitment and selectivity across stimulation configurations</li>
-        <li>Collaborated with clinicians to ensure translational relevance</li>
+        <li><strong>FEM geometry & physics</strong> — Designed and meshed the full spinal cord geometry in COMSOL, assigning tissue-specific conductivities and boundary conditions to simulate the electric field distribution under both transcutaneous and epidural electrode configurations.</li>
+        <li><strong>Neural modeling pipeline</strong> — Imported the computed extracellular potentials into NEURON and implemented biophysically realistic axon models to simulate action potential recruitment across dorsal column and dorsal root fibers.</li>
+        <li><strong>Multi-scale coupling</strong> — Developed the full Python/MATLAB pipeline to automate the data transfer between COMSOL and NEURON, enabling systematic parameter sweeps across stimulation amplitudes, frequencies, and electrode positions.</li>
+        <li><strong>Recruitment & selectivity analysis</strong> — Quantified fiber-type selectivity and recruitment curves across stimulation configurations, identifying conditions that maximize dorsal column activation while minimizing off-target recruitment.</li>
+        <li><strong>Translational framing</strong> — Engaged with clinicians to ground model parameters in realistic therapeutic scenarios and ensure findings were interpretable in a clinical context.</li>
       </ul>
-  
       <p>
-        Code (Confidential) · <a href="docs/report_TNE.pdf" target="_blank">Report</a>
+        Code (confidential) · <a href="docs/report_TNE.pdf" target="_blank">Report</a>
       </p>
     </div>
   </div>
   
   <div id="p2" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('p2')">&times;</span>
-  
-      <h2>Task Prediction Using fMRI Data</h2>
-
-      <img src="img/ML.png" class="modal-img">
-  
-      <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
-  
-      <p>
-        Developed deep learning models to predict task timecourses directly from
-        fMRI brain activity using data from the Human Connectome Project.
-      </p>
-  
-      <ul>
-        <li>Framed the problem as a blind deconvolution task</li>
-        <li>Implemented recurrent neural networks to capture temporal dynamics</li>
-        <li>Evaluated model performance on real neuroimaging datasets</li>
-      </ul>
-  
-      <p>
-        <a href="https://github.com/fedemengo/CS-433-ML4S" target="_blank">Code</a> · <a href="docs/ML2_report.pdf" target="_blank">Report</a>
-      </p>
+    <span class="close" onclick="closeModal('p2')">&times;</span>
+    <h2>Task Prediction Using fMRI Data</h2>
+    <img src="img/ML.png" class="modal-img">
+    <p><strong>Technologies:</strong> Python, PyTorch, RNNs, CNNs</p>
+    <p>
+            Developed deep learning models to predict task timecourses directly from
+            fMRI brain activity using data from the Human Connectome Project.
+    </p>
+    <ul>
+    <li>Framed the problem as a blind deconvolution task</li>
+    <li>Implemented recurrent neural networks to capture temporal dynamics</li>
+    <li>Evaluated model performance on real neuroimaging datasets</li>
+    </ul>
+    <p><strong>My Contributions:</strong></p>
+    <ul>
+    <li>Designed the preprocessing pipeline: grey matter masking, Gaussian spatial smoothing, and voxel selection via F-statistic thresholding and cluster filtering</li>
+    <li>Developed the dataset augmentation strategy: temporal circular shifts, amplitude scaling, Gaussian noise injection, and temporal stretching to reduce inter-voxel correlation and improve generalization</li>
+    <li>Led model selection: benchmarked 10+ architectures (LSTM, BiLSTM, ConvLSTM, attention variants) and identified the LSTMConvLSTM with custom loss as the best-performing model</li>
+    </ul>
+    <p>
+    <a href="https://github.com/fedemengo/CS-433-ML4S" target="_blank">Code</a> · <a href="docs/ML2_report.pdf" target="_blank">Report</a>
+    </p>
     </div>
   </div>
   
   <div id="p3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('p3')">&times;</span>
-  
       <h2>Kirigami-Based Soft Implantable Electrodes</h2>
-
       <img src="img/lsbi.png" class="modal-img">
-  
-      <p><strong>Technologies:</strong> Electrochemistry, Material Testing, Data Analysis</p>
-  
+      <p><strong>Technologies:</strong> Electrochemistry, Impedance Spectroscopy, Material Testing, Data Analysis</p>
       <p>
-        Investigated the long-term stability of kirigami-inspired soft electrodes
-        designed for chronic neural interfacing.
+        Independently investigated the long-term electrochemical and mechanical stability of
+        kirigami-inspired soft electrodes intended for chronic neural implantation, running
+        the full experimental pipeline from ageing protocols to data interpretation.
       </p>
-  
       <ul>
-        <li>Conducted ageing studies to evaluate impedance evolution</li>
-        <li>Analyzed material degradation mechanisms over time</li>
-        <li>Assessed suitability for long-term implantation</li>
+        <li><strong>Ageing protocol design</strong> — Designed and executed in vitro accelerated ageing studies, exposing electrodes to physiologically relevant conditions over extended timescales to simulate chronic implantation.</li>
+        <li><strong>Impedance spectroscopy</strong> — Performed electrochemical impedance spectroscopy (EIS) measurements at multiple time points to track impedance evolution and identify degradation onset and progression.</li>
+        <li><strong>Degradation analysis</strong> — Characterized material failure mechanisms — including delamination, coating breakdown, and geometric deformation of the kirigami cuts — and linked them to measurable changes in the electrochemical response.</li>
+        <li><strong>Suitability assessment</strong> — Synthesized experimental findings into a quantitative assessment of electrode longevity and reliability, evaluating readiness for chronic in vivo deployment.</li>
       </ul>
-  
       <p>
         Report & Code (confidential)
       </p>
@@ -173,7 +175,9 @@
   
       <h2>Machine Learning for Early Detection of Coronary Heart Disease Risk</h2>
   
-      <p><strong>Technologies:</strong> Python </p>
+      <img src="img/chd1.png" class="modal-img">
+
+      <p><strong>Technologies:</strong> Python, Machine Learning</p>
   
       <p>
         Built and optimized a logistic regression model to predict coronary heart
@@ -185,9 +189,17 @@
         <li>Applied class balancing and regularization techniques</li>
         <li>Optimized decision thresholds for improved prediction performance</li>
       </ul>
+
+      <p><strong>My Contributions:</strong></p>
+      <ul>
+        <li>Designed and executed the missing data imputation strategy</li>
+        <li>Led the full feature engineering pipeline, from selection to transformation</li>
+        <li>Developed the feature expansion method to improve model expressiveness</li>
+        <li>Tuned the decision threshold to optimize precision/recall trade-off</li>
+      </ul>
   
       <p>
-        Code (confidential)
+        Code (confidential) · <a href="docs/ML1_report.pdf" target="_blank">Report</a>
       </p>
     </div>
   </div>
@@ -197,27 +209,62 @@
       <span class="close" onclick="closeModal('p5')">&times;</span>
       <h2>Mapping the Collective Reddit Brain</h2>
       <img src="img/ada_exp.png" class="modal-img">
-  
       <p><strong>Technologies:</strong> Python, Network Analysis, Data Visualization</p>
-  
       <p>
-        We treated Reddit as a nervous system — subreddits as neurons, hyperlinks as action potentials,
-        and linguistic co-activation as functional connectivity — asking whether a platform of millions
-        behaves like a brain.
+              We treated Reddit as a nervous system — subreddits as neurons, hyperlinks as action potentials,
+              and linguistic co-activation as functional connectivity — asking whether a platform of millions
+              behaves like a brain.
       </p>
-  
       <ul>
-        <li><strong>Interaction networks</strong> — Built a structural connectome from hundreds of thousands of hyperlinks, classifying communities into sensory, interneuron, and motor archetypes by in/out-degree, with 300-dimensional embeddings as "axon length" proxies.</li>
-        <li><strong>NLP & feature extraction</strong> — Compressed LIWC psychological signals into six coherent neural signals per subreddit (affect, cognition, social orientation, etc.) to capture meaningful dynamics across time.</li>
-        <li><strong>Functional vs. structural connectivity</strong> — Isolated subreddits that co-evolve without ever directly linking, analogous to fMRI connectivity beyond anatomical wiring.</li>
-        <li><strong>Visualizations</strong> — Interactive dashboards for sentiment flow, hub resilience, and a 3D brain projection mapping subreddit categories onto MNI brain regions.</li>
+      <li><strong>Interaction networks</strong> — Built a structural connectome from hundreds of thousands of hyperlinks, classifying communities into sensory, interneuron, and motor archetypes by in/out-degree, with 300-dimensional embeddings as "axon length" proxies.</li>
+      <li><strong>NLP & feature extraction</strong> — Compressed LIWC psychological signals into six coherent neural signals per subreddit (affect, cognition, social orientation, etc.) to capture meaningful dynamics across time.</li>
+      <li><strong>Functional vs. structural connectivity</strong> — Isolated subreddits that co-evolve without ever directly linking, analogous to fMRI connectivity beyond anatomical wiring.</li>
+      <li><strong>Visualizations</strong> — Interactive dashboards for sentiment flow, hub resilience, and a 3D brain projection mapping subreddit categories onto MNI brain regions.</li>
       </ul>
-  
+      <p><strong>My Contributions:</strong></p>
+      <ul>
+      <li>Led the project and coordinated the team across all research directions</li>
+      <li>Originated the core concept: representing Reddit's structure as a brain and mapping it onto a neurological atlas</li>
+      <li>Drove the integration of external datasets to enrich the network with real-world context</li>
+      <li>Designed the neuron archetype analysis: asking whether subreddit categories behave like sensory, interneuron, and motor regions based on their linking patterns</li>
+      <li>Conceptualized the Positive & Negative Circuits framework to identify amplifying and dampening dynamics in the network</li>
+      <li>NLP & feature extraction to create the clustering in categories</li>
+      </ul>
       <p>
-        <a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a>
+      <a href="https://epfl-ada.github.io/ada-2025-project-merlot/" target="_blank">Project Website</a>
       </p>
-    </div>
-  </div>
+      </div>
+      </div>
+
+
+      <div id="p6" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('p6')">&times;</span>
+          <h2>Graphene Bubble Lens — Electromechanical Simulation</h2>
+          <img src="img/graphene_bubble.png" class="modal-img">
+          <p><strong>Technologies:</strong> COMSOL Multiphysics, Electrostatics, Solid Mechanics, FEM</p>
+          <p>
+            Modelled the voltage-induced deformation of graphene bubble lenses using
+            multiphysics finite-element simulation, treating the bubble as a tunable
+            nano-optical element whose geometry is controlled by an applied gate voltage.
+          </p>
+          <ul>
+            <li><strong>Geometry & physics setup</strong> — Built circular (2D axisymmetric + 3D) and triangular (pyramidal 3D) lens geometries in COMSOL, coupling Electrostatics and Solid Mechanics interfaces with parametric voltage sweeps from 0 to 400 V.</li>
+            <li><strong>Voltage vs. deflection</strong> — Simulated central deflection as a function of gate voltage, bubble diameter, and SiO₂ thickness; thinner dielectric layers produced up to 300 nm deflection vs. ~20 nm for thick ones, consistent with the capacitor-force model.</li>
+            <li><strong>Stress distribution</strong> — Analysed von Mises stress maps showing maximum stress concentration at clamped edges, with symmetric patterns for circular and corner-localized peaks for triangular geometries.</li>
+            <li><strong>Modal / eigenfrequency analysis</strong> — Extracted resonant modes for both lens shapes; results confirm out-of-plane fundamental modes with higher-order nodal patterns at increased frequencies.</li>
+          </ul>
+          <p><strong>My Contributions:</strong></p>
+          <ul>
+            <li>Led the project and coordinated the team across all research directions</li>
+            <li>Built and debugged the full 2d-axisymmetric and 3D COMSOL geometry for the circular and triangular lens, resolving memory assembly issues by finding the minimum viable graphene thickness (6 nm)</li>
+            <li>Ran parametric sweeps across voltage, bubble diameter, and SiO₂ thickness and interpreted the dielectric-spacing effect on electrostatic force</li>
+          </ul>
+          <p>
+            <a href="docs/EE536_report.pdf" target="_blank">Report</a>
+          </p>
+        </div>
+      </div>
   
   <script src="scripts.js"></script>
 
