@@ -384,3 +384,98 @@ footer {
   gap: 8px;
   margin-top: 4px;
 }
+
+
+
+
+/* Timeline (Experience, Education, Honors) */
+.timeline {
+  border-left: 1px solid #D3D1C7;
+  padding-left: 22px;
+  margin-top: 4px;
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.tl-item:last-child {
+  margin-bottom: 0;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #639922;
+}
+
+.tl-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tl-head h3 {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #1a1a18;
+}
+
+.tl-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: #888780;
+  white-space: nowrap;
+}
+
+.tl-org {
+  font-size: 13px;
+  color: #5F5E5A;
+  margin: 2px 0 8px;
+}
+
+.tl-item ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #444441;
+}
+
+.tl-item li {
+  margin-bottom: 4px;
+}
+
+/* Accessibility */
+a:focus-visible,
+.project-card:focus-visible,
+.close:focus-visible {
+  outline: 2px solid #3B6D11;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .header-links a {
+    transition: none;
+  }
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .tl-date {
+    white-space: normal;
+  }
+}
